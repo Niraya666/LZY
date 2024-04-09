@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/LZY_blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=LZY_blog/livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313/LZY_blog//img/IMG_0012.JPG">
-    <meta property="twitter:image" content="http://localhost:1313/LZY_blog//img/IMG_0012.JPG" />
+    <meta property="og:image" content="http://localhost:1313//img/IMG_0012.JPG">
+    <meta property="twitter:image" content="http://localhost:1313//img/IMG_0012.JPG" />
     
 
     
@@ -39,40 +39,40 @@
 
 
     <meta name="keyword"  content="LZY, Niraya, 博客, 个人网站, AI, Web3, Music">
-    <link rel="shortcut icon" href="/LZY_blog/img/favicon.ico">
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
     <title>RAG工具箱：评估RAG系统的方法论 | LZY的博客 | LZY&#39;s Blog</title>
 
-    <link rel="canonical" href="/LZY_blog/post/rag_toolkit_eval/">
+    <link rel="canonical" href="/post/rag%E5%B7%A5%E5%85%B7%E7%AE%B1/rag_toolkit_eval/">
 
     
     
     
-    <link rel="stylesheet" href="/LZY_blog/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     
-    <link rel="stylesheet" href="/LZY_blog/css/hugo-theme-cleanwhite.min.css">
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
 
     
-    <link rel="stylesheet" href="/LZY_blog/css/zanshang.css">
+    <link rel="stylesheet" href="/css/zanshang.css">
 
     
-    <link rel="stylesheet" href="/LZY_blog/css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
 
     
     
 
     
-    <script src="/LZY_blog/js/jquery.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
 
     
-    <script src="/LZY_blog/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     
-    <script src="/LZY_blog/js/hux-blog.min.js"></script>
+    <script src="/js/hux-blog.min.js"></script>
 
     
-    <script src="/LZY_blog/js/lazysizes.min.js"></script>
+    <script src="/js/lazysizes.min.js"></script>
 
     
     
@@ -118,7 +118,7 @@
                         <li><a href="/about//">ABOUT</a></li>
                     
 		            <li>
-                        <a href="/LZY_blog/search"><i class="fa fa-search"></i></a>
+                        <a href="/search"><i class="fa fa-search"></i></a>
 		           </li>
                 </ul>
             </div>
@@ -161,7 +161,7 @@
 
 <style type="text/css">
     header.intro-header {
-        background-image: url('/LZY_blog/img/IMG_0012.JPG')
+        background-image: url('/img/IMG_0012.JPG')
     }
 </style>
 
@@ -213,19 +213,19 @@
 <p>在过去的几个月中，我主要致力于与RAG（检索增强生成模型）相关的研究和实验工作。通过深入地分析众多论文和项目代码，我发现虽然在RAG领域取得基本成就相对容易，但要实现出色的成果却异常困难。</p>
 <p>此系列文章旨在分享我在RAG研究中的心得和挑战。正如我们从OpenAI的开发者日活动中看到的，即使是在这个领域的领头羊也在不断试验和努力以寻求突破。</p>
 <p>
-  <img src="./image/Pasted%202024-03-15-16-20-20.png" alt="Pasted 2024-03-15-16-20-20.png">
+  <img src="/LZY_blog/img/rag_toolkits/1_1.png" alt="from openAI devday">
 
 </p>
 <p>在我们深入探索RAG系统提升的各种方法之前，有一个基本问题需要解决：我们如何准确地评估一个RAG系统的性能？这就像是在机器学习或深度学习任务中没有给定的测试集和评价标准，我们难以判断实验的成功与否。</p>
 <p>因此，本系列的第一篇文章将聚焦于介绍RAG系统的评价方法、相关指标以及测试框架，为我们接下来的探索设定明确的标准和目标。</p>
 <h2 id="测试框架">测试框架</h2>
-<p>以下是一些先进的测试框架，它们为RAG系统评估提供了强大的支持。</p>
+<p>以下是一些测试框架，为RAG系统评估提供了强大的支持。</p>
 <h3 id="trulens"><strong>TruLens</strong></h3>
 <p>TruLens提供了一个独特的视角来评估和跟踪大型语言模型（LLM）实验，通过一系列创新的功能和方法，帮助开发者和研究人员更深入地了解模型性能和行为。</p>
 <p>TruLens的反馈功能（Feedback Functions）是其核心概念之一，提供了一种程序化的方法来评估应用的运行表现。这些函数从“可扩展性”和“有意义性”两个维度出发，考虑评估的范围，旨在为用户提供有价值的反馈，帮助他们理解和改进他们的LLM应用。</p>
 <p>在RAG应用中，提供准确的上下文信息至关重要，以避免生成不真实的“幻觉”答案。TruLens采用了创新性的RAG三元组评估方法，专门针对RAG架构的每个环节进行幻觉风险评估，确保模型的每个部分都能有效地工作，从而减少误导信息的产生。</p>
 <p>
-  <img src="./RAG%e5%b7%a5%e5%85%b7%e7%ae%b1%ef%bc%9a%e8%af%84%e4%bc%b0RAG%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%96%b9%e6%b3%95%e8%ae%ba-assets/Pasted%202024-03-15-14-40-01.jpeg" alt="Pasted 2024-03-15-14-40-01.jpeg">
+  <img src="/LZY_blog/img/rag_toolkits/1_2.jpeg" alt="Pasted 2024-03-15-14-40-01.jpeg">
 
 </p>
 <h4 id="上下文相关性context-relevance">上下文相关性（Context Relevance）</h4>
@@ -237,7 +237,7 @@
 <p>TruLens还提出了“诚实、无害和有帮助”的评估原则（Honest, Harmless, and Helpful Evaluations），这些原则旨在确保LLM应用在提供帮助的同时，也是安全和可信的。</p>
 <h3 id="ragas">Ragas</h3>
 <p>
-  <img src="./RAG%e5%b7%a5%e5%85%b7%e7%ae%b1%ef%bc%9a%e8%af%84%e4%bc%b0RAG%e7%b3%bb%e7%bb%9f%e7%9a%84%e6%96%b9%e6%b3%95%e8%ae%ba-assets/Pasted%202024-01-10-10-52-23.webp" alt="Pasted 2024-01-10-10-52-23.webp">
+  <img src="/LZY_blog/img/rag_toolkits/1_3.webp" alt="Pasted 2024-01-10-10-52-23.webp">
 
 </p>
 <p>Ragas框架专为评估检索增强生成（RAG）系统而设计，定义了四个核心评估指标：上下文相关性（context_relevancy）、上下文回溯（context_recall）、忠实度（faithfulness）和答案相关性（answer_relevancy）。这些指标共同构成了Ragas的评分体系，提供了一个全面的方法来评价RAG系统的性能。</p>
@@ -668,7 +668,7 @@ $$</p>
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/LZY_blog/post/2024-03-%E6%9C%88%E5%88%8A/2024-03%E6%9C%88%E5%88%8A/" data-toggle="tooltip" data-placement="top" title="2024-03 月刊">&larr;
+                        <a href="/post/2024-03-%E6%9C%88%E5%88%8A/2024-03%E6%9C%88%E5%88%8A/" data-toggle="tooltip" data-placement="top" title="2024-03 月刊">&larr;
                             Previous Post</a>
                     </li>
                     
@@ -902,7 +902,7 @@ $$</p>
     
 
 
-    loadAsync("\/LZY_blog\/js\/jquery.nav.js", function () {
+    loadAsync("\/js\/jquery.nav.js", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,
