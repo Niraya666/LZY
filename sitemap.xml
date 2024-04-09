@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/LZY_blog/</loc>
     <lastmod>2024-04-08T11:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>http://localhost:1313/LZY_blog/post/</loc>
     <lastmod>2024-04-08T11:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/rag%E5%B7%A5%E5%85%B7%E7%AE%B1/rag_toolkit_eval/</loc>
+    <loc>http://localhost:1313/LZY_blog/post/rag%E5%B7%A5%E5%85%B7%E7%AE%B1/rag_toolkit_eval/</loc>
     <lastmod>2024-04-08T11:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/2024-03-%E6%9C%88%E5%88%8A/2024-03%E6%9C%88%E5%88%8A/</loc>
+    <loc>http://localhost:1313/LZY_blog/post/2024-03-%E6%9C%88%E5%88%8A/2024-03%E6%9C%88%E5%88%8A/</loc>
     <lastmod>2024-03-31T21:12:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/hello-world/</loc>
+    <loc>http://localhost:1313/LZY_blog/post/hello-world/</loc>
     <lastmod>2024-03-30T14:44:41+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:1313/LZY_blog/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/notes/</loc>
+    <loc>http://localhost:1313/LZY_blog/notes/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/placeholder/</loc>
+    <loc>http://localhost:1313/LZY_blog/search/placeholder/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/LZY_blog/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/archive/</loc>
+    <loc>http://localhost:1313/LZY_blog/archive/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>http://localhost:1313/LZY_blog/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/LZY_blog/tags/</loc>
   </url>
 </urlset>
